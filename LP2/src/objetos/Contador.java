@@ -2,25 +2,33 @@ package objetos;
 
 public class Contador {
 
-	private int valor = 0;
+	private int contagem;
+
+	public Contador(int valorInicial) {
+		setContagem(valorInicial);
+	}
 	
+	public Contador() {
+		setContagem(0);
+	}
+
 	public int incrementa() {
-		valor = valor + 1;
-		return valor;
+		contagem = contagem + 1;
+		return contagem;
 	}
-	
+
 	public int decrementa() {
-		valor = valor - 1;
-		return valor;
+		contagem = contagem - 1;
+		return contagem;
 	}
-	
-	public int getValor() {
-		return valor;
+
+	public int getContagem() {
+		return contagem;
 	}
-	
-	public void setValor(int novoValor) {
-		valor = novoValor;
+
+	public void setContagem(int novoValor) {
+		if (novoValor >= 0) {
+			contagem = novoValor;
+		}
 	}
-	
-	
 }
