@@ -2,6 +2,19 @@ package objetos;
 
 public class Main {
 	public static void main(String[] args) {
+		testeConstrutor();
+	}
+	
+	public static void testeConstrutor() {
+		Contador c = new Contador(100);
+		Contador c2 = new Contador();
+		c.incrementa();
+		c2.incrementa();
+		System.out.println(c.getContagem());
+		System.out.println(c2.getContagem());
+	}
+	
+	public static void testePessoa() {
 		Pessoa pessoa = new Pessoa();
 		pessoa.setNome("Manoel");
 		pessoa.setCPF("123.456.789.11");
