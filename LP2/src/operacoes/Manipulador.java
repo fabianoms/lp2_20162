@@ -6,33 +6,26 @@ import objetos.Contador;
 
 public class Manipulador {
 	public static void main(String[] args) {
+		criandoContadores();
+	}
+	
+	public static void criandoContadores() {
 		Contador meuContadorA = new Contador();
 		Contador meuContadorB = new Contador();
-		int v1 = -1;
-		int v2 = -1;
+		
 		//incrementar 50 vezes
 		for (int i = 0; i < 50; i++) {
-			v1 = meuContadorA.incrementa();
+			meuContadorA.incrementa();
 		}		
 		//decrementar 72 vezes
 		for (int i = 0; i < 72; i++) {
-			v2 = meuContadorB.decrementa();
+			meuContadorB.decrementa();
 		}
-		
-		
-		System.out.println("V1: " + v1);
-		System.out.println("V2: " + v2);
 	
-	
-	
-	
-	
-	
+		System.out.println(meuContadorA.getContagem());
+		System.out.println(meuContadorB.getContagem());
 	}
 
-	
-	
-	
 	
 	public static void chamadasOpMat() {
 		Scanner sc = new Scanner(System.in);
@@ -40,6 +33,7 @@ public class Manipulador {
 		System.out.println("Informe dois valores inteiros maiores ou iguais a zero:");
 		int m = sc.nextInt();
 		int n = sc.nextInt();
+		sc.close();
 
 		long resultado = OpMat.somatorio(3, 5);
 		System.out.println(resultado);
