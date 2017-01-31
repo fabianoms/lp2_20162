@@ -3,8 +3,11 @@ package objetos;
 public class Pessoa {
 
 	private String nome;
+	
 	private String endereco;
+	
 	private int anoNasc;
+	
 	private String cpf;
 	
 	public String getNome(){
