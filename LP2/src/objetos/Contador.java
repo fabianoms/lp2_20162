@@ -7,9 +7,9 @@ public class Contador {
 	public Contador(int valorInicial) {
 		setContagem(valorInicial);
 	}
-	
+
 	public Contador() {
-		setContagem(0);
+		this(0);
 	}
 
 	public int incrementa() {
@@ -32,3 +32,5 @@ public class Contador {
 		}
 	}
 }
+
+
