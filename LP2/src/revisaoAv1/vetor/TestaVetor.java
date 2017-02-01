@@ -1,4 +1,4 @@
-package revisaoAv1;
+package revisaoAv1.vetor;
 
 public class TestaVetor {
 
