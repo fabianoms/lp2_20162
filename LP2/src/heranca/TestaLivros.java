@@ -3,6 +3,10 @@ package heranca;
 public class TestaLivros {
 
 	public static void main(String[] args) {
+		testesHeranca();
+	}
+
+	private static void testesHeranca() {
 		LivroBiblioteca lb = new LivroBiblioteca();
 		lb.setTitulo("meu lb");
 		//lb.setNumPaginas(150);
@@ -24,9 +28,8 @@ public class TestaLivros {
 		//downcasting é um artifício não muito recomendado
 		Livro meuLivro = new Livro();
 		LivroLivraria conversaoPerigosa = (LivroLivraria)meuLivro;
-		
-		
 
+		
 	}
 
 }
