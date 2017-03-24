@@ -22,8 +22,7 @@ public class Main {
 		ll.add(34);
 		ll.add(45);
 		
-		
-		ListIterator iterator = ll.listIterator();
+		ListIterator<Integer> iterator = ll.listIterator();
 		while (iterator.hasNext()) {
 			System.out.println(iterator.next());
 		}
