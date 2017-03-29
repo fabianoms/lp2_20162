@@ -1,14 +1,11 @@
 package metodos_estaticos;
 
 public class StaticTest {
-
+	private int atributoA;
+	private static int atributoEstatico;
+	
 	public static void main(String[] args) {
-		imprimeMsg("Olá");
-		imprimeMsg("teste2");
-
-	}
-
-	private static void imprimeMsg(String msg) {
-		System.out.println(msg);
+		atributoEstatico = 2;
+		StaticClass.imprime("Olá");
 	}
 }

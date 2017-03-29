@@ -2,23 +2,29 @@ package pkgfinal;
 
 public final class Mensagem {
 
-	private final int MAX_CARACTERES;
+	protected final int MAX_CARACTERES;
+	private final static int MAX_CARACTERES_PADRAO = 100;
 	
-	protected String corpoMsg;
+	protected String corpo;
 	
 	public Mensagem(int maxCaracteres) {
 		MAX_CARACTERES = maxCaracteres;
 	}
 	
 	public Mensagem() {
-		this(500);
+		this(MAX_CARACTERES_PADRAO);
 	}
 	
-	public final void setCorpoMsg(String c) {
-		corpoMsg = c;
+	public String getCorpo() {
+		return corpo;
 	}
 	
-	
-	
-	
+	public final boolean setCorpo(String corpo) { 
+		if (corpo.length() <= MAX_CARACTERES) {
+			this.corpo = corpo;
+			return true;
+		} else { 
+			return false;
+		}
+	}
 }
