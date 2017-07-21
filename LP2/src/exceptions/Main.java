@@ -1,20 +1,21 @@
 package exceptions;
 
-import heranca.Livro;
-
 public class Main {
 	public static void main(String[] args) {
-//		Livro l = new Livro();
-//		String teste = "olá";
-//		System.out.println(l.getTitulo().length());
-		
+		Pessoa a = new Pessoa();
+		a.setNome("Josenildo");
+		Pessoa b = new Pessoa();
+		Pessoa c = new Pessoa();
 		try {
-			int[] numeros = {1, 2, 4};
-			System.out.println(numeros[0]);
-		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println("Índice inválido!");
-		} finally {
-			System.out.println("Mensagem importante!!!");
+			System.out.println(a.tamanhoDoNome());
+			a.setCPF("12345678912");
+		} catch (PessoaSemNomeException e) {
+			System.out.println(e.getMessage());
+		} catch (CPFInvalidoException e) {
+			System.out.println("CPF inválido informado: " + e.getMessage());
+		}
+		finally {
+			System.out.println("Fechar arquivo...");
 		}
 		System.out.println("Chegou no final");
 		
